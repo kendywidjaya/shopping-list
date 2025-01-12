@@ -61,11 +61,6 @@ header h1 {
   outline: none;
 }
 
-.clear-ui {
-  display: none!important;
-  background-color: rgb(112, 153, 89);
-}
-
 /* Buttons */
 .btn {
   background-color: #333;
@@ -92,7 +87,7 @@ header h1 {
 .btn-clear {
   margin-top: 20px;
   width: 100%;
-  font-size: 24px;
+  font-size: 18px;
   background-color: transparent;
   color: #333;
   border: 1px solid #ccc;
@@ -133,4 +128,9 @@ header h1 {
   .items li {
     width: 100%;
   }
+}
+
+.clear-ui {
+  display: none!important;
+  background-color: rgb(112, 153, 89);
 }
