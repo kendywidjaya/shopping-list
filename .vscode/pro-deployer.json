@@ -1,0 +1,41 @@
+{
+	"enableStatusBarItem": true,
+	"enableQuickPick": true,
+	"uploadOnSave": true,
+	"autoDelete": true,
+	"checkGitignore": false,
+	"activeTargets": [
+		"My FTP"
+	],
+	"concurrency": 5,
+	"ignore": [
+		".git/**/*",
+		".vscode/**/*"
+	],
+	"include": [],
+	"targets": [
+		{
+            "name": "My SFTP",
+            "type": "sftp",
+            "host": "sftp.paduanpanen.net",
+            "port": 22,
+            "user": "jsapp.paduanpanen.net@jsapp.paduanpanen.net",
+            "password": "SejahteraMandiri5",
+            "dir": "/",
+            "baseDir": "/",
+            "privateKey": "D:\\Users\\kendy\\OneDrive\\Documents\\id_dsa",
+            "passphrase": "SejahteraMandiri5"
+        },
+		{
+			"name": "My FTP",
+			"type": "ftp",
+			"host": "ftp.paduanpanen.net",
+			"port": 21,
+			"user": "jsapp.paduanpanen.net@jsapp.paduanpanen.net",
+			"password": "SejahteraMandiri5",
+			"dir": "/",
+			"baseDir": "/",
+			"transferDataType": "binary"
+		}
+	]
+}
