@@ -17,14 +17,14 @@
 		{
             "name": "My SFTP",
             "type": "sftp",
-            "host": "sftp.paduanpanen.net",
-            "port": 22,
-            "user": "jsapp.paduanpanen.net@jsapp.paduanpanen.net",
-            "password": "SejahteraMandiri5",
+            "host": "ftp.paduanpanen.net",
+            "port": 8288,
+            "user": "paduanpanennet",
+            "password": "",
             "dir": "/",
             "baseDir": "/",
-            "privateKey": "D:\\Users\\kendy\\OneDrive\\Documents\\id_dsa",
-            "passphrase": "SejahteraMandiri5"
+            "privateKey": "C:\\Users\\kendy\\.ssh\\id_rsa_github",
+            "passphrase": ""
         },
 		{
 			"name": "My FTP",
