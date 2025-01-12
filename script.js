@@ -1,6 +1,8 @@
 const itemForm = document.getElementById('item-form');
 const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
+const clearBtn = document.getElementById('clear');
+const filterLbl = document.getElementById('filter');
 
 function addItem(e) {
   e.preventDefault();
@@ -23,6 +25,8 @@ function addItem(e) {
 
   itemList.appendChild(li);
 
+  resetUI();
+
   itemInput.value = '';
 }
 
@@ -42,5 +46,39 @@ function createIcon(classes) {
   return icon;
 }
 
+function removeItem(e) {
+  if (e.target.className == 'fa-solid fa-xmark') {
+    if (confirm('Are you sure?')) {
+      e.target.parentElement.parentElement.remove();
+      resetUI();
+    }
+  }
+}
+
+function clearItems() {
+  if (confirm('Are you sure?')) {
+    while (itemList.firstChild) {
+      itemList.removeChild(itemList.firstChild);
+    };
+    resetUI();
+  }
+}
+
+function resetUI() {
+  const items = document.querySelectorAll('li')
+
+  if (items.length === 0) {
+    filterLbl.classList.add('clear-ui');
+    clearBtn.classList.add('clear-ui');
+  } else if (filterLbl.classList.contains('clear-ui')){
+    filterLbl.classList.remove('clear-ui');
+    clearBtn.classList.remove('clear-ui');
+  } 
+}
+
 // Event Listener
 itemForm.addEventListener('submit', addItem);
+itemList.addEventListener('click', removeItem);
+clearBtn.addEventListener('click', clearItems);
+
+resetUI();
