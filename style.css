@@ -87,7 +87,7 @@ header h1 {
 .btn-clear {
   margin-top: 20px;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   background-color: transparent;
   color: #333;
   border: 1px solid #ccc;
@@ -133,4 +133,5 @@ header h1 {
 .clear-ui {
   display: none!important;
   background-color: rgb(112, 153, 89);
+  color: white
 }

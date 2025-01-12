@@ -2,7 +2,7 @@ const itemForm = document.getElementById('item-form');
 const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const clearBtn = document.getElementById('clear');
-const filterLbl = document.getElementById('filter');
+const itemFilter = document.getElementById('filter');
 
 function addItem(e) {
   e.preventDefault();
@@ -64,14 +64,25 @@ function clearItems() {
   }
 }
 
+function filterItems(e) {
+  const items = document.querySelectorAll('li');
+  const text = e.target.value.toLowerCase();
+
+  console.log(text);
+
+  items.forEach(item => {
+    console.log(item);
+  });
+}
+
 function resetUI() {
-  const items = document.querySelectorAll('li')
+  const items = document.querySelectorAll('li');
 
   if (items.length === 0) {
-    filterLbl.classList.add('clear-ui');
+    itemFilter.classList.add('clear-ui');
     clearBtn.classList.add('clear-ui');
-  } else if (filterLbl.classList.contains('clear-ui')){
-    filterLbl.classList.remove('clear-ui');
+  } else if (itemFilter.classList.contains('clear-ui')){
+    itemFilter.classList.remove('clear-ui');
     clearBtn.classList.remove('clear-ui');
   } 
 }
@@ -80,5 +91,6 @@ function resetUI() {
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
 clearBtn.addEventListener('click', clearItems);
+itemFilter.addEventListener('input', filterItems);
 
 resetUI();
